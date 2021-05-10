@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#Zad1
+#Wykres liniowy - liczba urodzonych dziaci dla każdego roku
+df = pd.read_excel('imiona.xlsx', header=0)
+#print(df)
+grupa = df.groupby(['Rok'])
+wykres = grupa.plot()
+plt.legend(loc='lower right')
+plt.title('Suma zamówienia dla sprzedawcy')
+plt.show()
+#ten kawałek kodu uruchamia kilka wykresów i nie mam pojęcia dlaczego
+
+
+
+
+
+
+
+
