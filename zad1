@@ -6,12 +6,11 @@ import matplotlib.pyplot as plt
 #Wykres liniowy - liczba urodzonych dziaci dla każdego roku
 df = pd.read_excel('imiona.xlsx', header=0)
 #print(df)
-grupa = df.groupby(['Rok'])
+grupa = df.groupby(['Rok']).agg({'Liczba':['sum']})
 wykres = grupa.plot()
 plt.legend(loc='lower right')
-plt.title('Suma zamówienia dla sprzedawcy')
+#plt.title('Suma zamówienia dla sprzedawcy')
 plt.show()
-#ten kawałek kodu uruchamia kilka wykresów i nie mam pojęcia dlaczego
 
 
 
